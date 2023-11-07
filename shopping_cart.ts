@@ -20,6 +20,11 @@ class ShoppingCart {
     }
   }
 
+  replaceItem(oldItem: string, newItem: string) {
+    const index = this.items.indexOf(oldItem);
+    this.items.splice(index, 1, newItem);
+  }
+
   getItems(): string[] {
     return this.items;
   }
